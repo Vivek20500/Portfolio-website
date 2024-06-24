@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-color: rgb(24, 57, 74);
+    margin-bottom: 100px;
+    /* overflow-x:hidden ; */
+}
+.hamburger{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.412);
+    color:white;
+    border: none;
+    border-radius: 50%;
+    font-size: 50px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+}
+header{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    align-items: baseline;
+    backdrop-filter: blur(5px);
+    background-color:rgba(0, 0, 0, 0.049);
+    position: fixed;
+    z-index: 100;
+    padding-top: 10px;
+    top:-100%;
+    left:60px;
+    height: fit-content;
+    width: 100vw;
+    transition: 0.2s all;
+}
+.show{
+    transition: 0.2s all;
+    top:0;
+}
+.icon-container{
+    font-size: 30px;
+    font-family:fantasy;
+    font-style: italic;
+    margin-left: 30px;
+    color: rgb(255, 0, 0);
+}
+.icon{
+    width: fit-content;
+    padding-right:10px;
+}
+
+.menu{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 20px;
+    transition: all 0.5s;
+    
+}
+.menu-options{
+    padding: 20px;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight:700;
+    transition: 0.5s ease-in-out;
+    scroll-behavior: smooth;
+}
+.menu-options:hover{
+    border-bottom: 4px solid red;
+    padding-bottom: 16px;
+    color: bisque;
+}
+.active{
+    border-bottom: 4px solid red;
+    padding-bottom: 16px;
+    transition: 0.5s ease-in-out;
+    color: bisque;
+}
+
+.main{
+    /* background-color: rgba(246, 255, 0, 0.849); */
+    height: fit-content;
+    height: fit-content;
+    width: 100vw;
+    color: white;
+    flex-direction: column;
+}
+.my-info{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+.pfp{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+    border: 5px solid white;
+    animation: grow 0.5s;
+}
+.name{
+    margin: 15px;
+    font-size: 60px;
+    font-weight:900;
+}
+.fname{
+    animation: slideF 0.5s;
+}
+.lname{
+    animation: slideL 0.5s;
+}
+.line{
+    width: 70%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 150px;
+    margin-bottom: 100px;
+}
+.headings{
+    font-size: 50px;
+    text-decoration: underline;
+}
+.costum-font{
+    color: white;
+    font-family: "Playwrite GB J", cursive;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;  
+}
+.quali{
+    margin: 10px;
+    color: gold;
+}
+.school{
+    border: 3px solid white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+.school::after{
+    content: " ";
+    margin-top:20px;
+    width: 3px;
+    height: 103px;
+    position: absolute;
+    background-color: aliceblue;
+}
+.sub-headings{
+    font-size: 30px;
+    text-decoration: none;
+}
+.college{
+    border: 3px solid white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+.skills-logo{
+    width: 80vw;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+.logos{
+    margin: 20px;
+    height: 200px;
+}
+.project{
+    margin-top: 40px;
+    width: 100vw;
+    height: 500px;
+}
+.project-links{
+    height:500px;
+    width:60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 80px auto 80px auto;
+}
+.project-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.project-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width:  100%;
+    background-color: rgba(0, 0, 0, 0.614);
+    transform: translateY(100%);
+    opacity: 0;
+}
+.project-div:hover .project-name{
+    transform: translateY(0);
+    opacity: 1;
+}
+.project-div:hover{
+    padding: 10px;
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: 0 0 20px black;
+}
+.animate{
+    transform: translateY(100%);
+    opacity: 0;
+    scale:0;
+}
+.project-name:hover{
+    backdrop-filter: blur(1px);
+}
+.socials{
+    margin: 30px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+.shown{
+    transform: translateY(0%);
+    opacity: 1;
+    scale: 1;
+    transition: all 0.5s;
+}
+.animate2{
+    transform: translateX(-100%);
+    filter: blur(5px);
+    opacity: 0;
+}
+.shown2{
+    transform: translateX(0%);
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 0.5s;
+}
+.animate2:nth-child(1){
+    transition-delay: 100ms;
+}
+.animate2:nth-child(2){
+    transition-delay: 200ms;
+}
+.animate2:nth-child(3){
+    transition-delay: 300ms;
+}
+
+.animate3{
+    transform: translateX(25%);
+    background-size: cover;
+    background-position: center;
+}
+.shown3{
+    transform: translateX(0%);
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 0.3s;
+}
+.animate3:nth-child(1){
+    background-image: url(./img/ToDo.png);
+    /* transition-delay: 100ms; */
+}
+.animate3:nth-child(2){
+    background-image: url(./img/Calcu.png);
+    /* transition-delay: 200ms; */
+}
+.animate3:nth-child(3){
+    background-image: url(./img/myCLicks.png);
+    /* transition-delay: 300ms; */
+}
+.animate3:nth-child(4){
+    /* transition-delay: 400ms; */
+}
+.animate3:nth-child(5){
+    /* transition-delay: 500ms; */
+}
+@keyframes slideF {
+    0%{
+        opacity: 0%;
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes slideL {
+    0%{
+        opacity: 0%;
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes grow {
+    0%{
+        opacity: 0;
+        scale:0.5
+    }
+    60%{
+        scale:1.2;
+    }
+    100%{
+        scale:1;
+    }
+}
+
+
+@media only screen and (max-width:750px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 100vw;
+    }
+    .main{
+        width: 100%;
+        /* background-color: black; */
+        flex-direction: column;
+    }
+    header{
+        display: grid;
+        grid-template-rows: 1fr;
+        align-items: baseline;
+        backdrop-filter: blur(5px);
+        background-color:rgba(0, 0, 0, 0.049);
+        position: fixed;
+        z-index: 100;
+        padding-top: 10px;
+        top:-100%;
+        left:60px;
+        height: fit-content;
+        width: 100vw;
+        transition: 0.2s all;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        backdrop-filter: blur(5px);
+        background-color:rgba(0, 0, 0, 0.049);
+        position: fixed;
+        z-index: 100;
+        padding-top: 10px;
+        top:0px;
+        left:-100%;
+        height:100vh;
+        width: 100vw;
+        transition: 0.2s all;
+    }
+    .show{
+        transition: 0.2s all;
+        left:0;
+    }
+    .menu{
+        justify-content: start;
+        flex-direction: column;
+    }
+
+    .pfp{
+        height: 250px;
+        width: 250px;
+    }
+    .name{
+        margin: 15px;
+        margin-top: 25px;
+        font-size: 30px;
+        font-weight:900;
+    }
+    .line:nth-child(){
+        margin-top: 0;
+    }
+    .line{
+        margin:80px;
+    }
+    .skills-logo{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .logos{
+        width:80% ;
+        margin: 0;
+    }
+    .headings{
+        font-size: 30px;
+        text-decoration: none;
+    }
+    .school{
+        border: 3px solid white;
+        padding: 10px;
+        margin: 10px 20px auto 20px;
+        border-radius: 7px;
+        font-weight: 400;
+
+    }
+    .school::after{
+        margin-top:10px;
+    }
+    .sub-headings{
+        font-size: 15px;
+        font-weight: 500;
+
+    }
+
+    .college{
+        margin:100px 20px auto 20px;
+        padding: 7px;
+        border-radius: 7px;
+        padding-top: 20px;
+        font-weight: 300;
+    }
+    .project-links{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .animate3{
+    }
+    .animate3:nth-child(1){
+        background-image: url(./img/ToDo2.png);
+    }
+    .animate3:nth-child(2){
+        background-image: url(./img/Calcu2.png);
+    }
+    .animate3:nth-child(3){
+        background-image: url(./img/myCLicks2.png);
+    }
+}
