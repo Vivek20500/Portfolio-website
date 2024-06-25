@@ -192,7 +192,7 @@ header{
     height:500px;
     width:60%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin: 80px auto 80px auto;
 }
 .project-div{
@@ -289,6 +289,7 @@ header{
     /* transition-delay: 300ms; */
 }
 .animate3:nth-child(4){
+    background-image: url(./img/solar2.png);
     /* transition-delay: 400ms; */
 }
 .animate3:nth-child(5){
@@ -445,5 +446,8 @@ header{
     }
     .animate3:nth-child(3){
         background-image: url(./img/myCLicks2.png);
+    }
+    .animate3:nth-child(4){
+        background-image: url(./img/solar.png);
     }
 }
