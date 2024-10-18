@@ -1,8 +1,8 @@
-// const menu=document.querySelector('.hamburger');
+const menu=document.querySelector('.hamburger');
 
-// menu.addEventListener('click',()=>{
-//     document.querySelector('header').classList.toggle('show')
-// })
+menu.addEventListener('click',()=>{
+    document.querySelector('header').classList.toggle('show')
+})
 
 // const observer=new IntersectionObserver(e=>{
 //     e.forEach(entry=>{
